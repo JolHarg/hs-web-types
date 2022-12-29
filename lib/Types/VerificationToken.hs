@@ -1,0 +1,24 @@
+{-# LANGUAGE DeriveDataTypeable #-}
+{-# LANGUAGE DeriveGeneric      #-}
+{-# LANGUAGE DerivingVia        #-}
+
+module Types.VerificationToken where
+
+import           Data.Aeson
+import           Data.Data
+import           Data.UUID.Types
+import           GHC.Generics
+import           Servant.API
+
+-- don't use this - todo
+newtype VerificationToken = VerificationToken {
+    getVerificationToken :: UUID
+} deriving stock (Generic, Data)
+    -- do we need to redact ToHttpApiData?
+    deriving (Eq, Read, FromJSON, FromHttpApiData, ToHttpApiData) via UUID
+
+instance Show VerificationToken where
+    show _ = "[redacted]"
+
+instance ToJSON VerificationToken where
+    toJSON _ = String "[redacted]"
