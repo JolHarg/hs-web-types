@@ -4,13 +4,13 @@
 
 module Types.Password (Password(Password), mkPassword, getPassword) where
 
-import           Control.Monad      (when)
-import           Data.Aeson
-import           Data.Data
-import           Data.Text          as T
-import           GHC.Generics
-import           Servant.API
-import           Types.ErrorMessage
+import Control.Monad      (when)
+import Data.Aeson
+import Data.Data
+import Data.Text          as T
+import GHC.Generics
+import Servant.API
+import Types.ErrorMessage
 
 -- don't use this - todo
 newtype Password = Password {

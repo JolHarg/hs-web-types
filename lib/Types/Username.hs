@@ -4,12 +4,12 @@
 
 module Types.Username (Username(Username), mkUsername, getUsername) where
 
-import           Data.Aeson
-import           Data.Data
-import           Data.Text
-import           GHC.Generics
-import           Servant.API
-import           Types.ErrorMessage
+import Data.Aeson
+import Data.Data
+import Data.Text
+import GHC.Generics
+import Servant.API
+import Types.ErrorMessage
 
 newtype Username = Username {
     getUsername :: Text

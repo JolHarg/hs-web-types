@@ -4,14 +4,14 @@
 
 module Types.Name (Name(Name), mkName, getName) where
 
-import           Control.Monad      (when)
-import           Data.Aeson
-import           Data.Char
-import           Data.Data
-import           Data.Text          as T
-import           GHC.Generics
-import           Servant.API
-import           Types.ErrorMessage
+import Control.Monad      (when)
+import Data.Aeson
+import Data.Char
+import Data.Data
+import Data.Text          as T
+import GHC.Generics
+import Servant.API
+import Types.ErrorMessage
 
 newtype Name = Name {
     getName :: Text

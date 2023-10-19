@@ -3,10 +3,10 @@
 
 module Types.UserType where
 
-import           Data.Aeson  as A
-import           Data.Data
-import           Servant.API
-import           Text.Read   as R
+import Data.Aeson  as A
+import Data.Data
+import Servant.API
+import Text.Read   as R
 
 data UserType = Normal | Admin | Superuser
     deriving stock (Eq, Ord, Data)

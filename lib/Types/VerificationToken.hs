@@ -4,11 +4,11 @@
 
 module Types.VerificationToken where
 
-import           Data.Aeson
-import           Data.Data
-import           Data.UUID.Types
-import           GHC.Generics
-import           Servant.API
+import Data.Aeson
+import Data.Data
+import Data.UUID.Types
+import GHC.Generics
+import Servant.API
 
 -- don't use this - todo
 newtype VerificationToken = VerificationToken {

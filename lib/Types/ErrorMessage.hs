@@ -2,8 +2,8 @@
 
 module Types.ErrorMessage (ErrorMessage(getErrorMessage), errMsg) where
 
-import           Control.Monad.Except
-import           Data.Text
+import Control.Monad.Except
+import Data.Text
 
 {-
 data ErrorMessage = ErrorMessage {
