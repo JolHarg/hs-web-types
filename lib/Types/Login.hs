@@ -1,7 +1,7 @@
 {-# LANGUAGE DeriveAnyClass     #-}
 {-# LANGUAGE DeriveGeneric      #-}
 {-# LANGUAGE DerivingStrategies #-}
-{-# LANGUAGE Unsafe #-}
+{-# LANGUAGE Unsafe             #-}
 
 module Types.Login where
 

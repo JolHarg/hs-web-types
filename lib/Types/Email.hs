@@ -1,7 +1,7 @@
 {-# LANGUAGE DeriveDataTypeable #-}
 {-# LANGUAGE DeriveGeneric      #-}
 {-# LANGUAGE DerivingVia        #-}
-{-# LANGUAGE Unsafe #-}
+{-# LANGUAGE Unsafe             #-}
 
 module Types.Email (Email(Email), mkEmail, getEmail) where
 

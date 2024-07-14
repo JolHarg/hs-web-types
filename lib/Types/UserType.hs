@@ -1,6 +1,6 @@
 {-# LANGUAGE DeriveDataTypeable #-}
 {-# LANGUAGE LambdaCase         #-}
-{-# LANGUAGE Unsafe #-}
+{-# LANGUAGE Unsafe             #-}
 
 module Types.UserType where
 

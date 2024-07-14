@@ -1,7 +1,7 @@
 {-# LANGUAGE DeriveDataTypeable #-}
 {-# LANGUAGE DeriveGeneric      #-}
 {-# LANGUAGE DerivingVia        #-}
-{-# LANGUAGE Unsafe #-}
+{-# LANGUAGE Unsafe             #-}
 
 module Types.Username (Username(Username), mkUsername, getUsername) where
 
