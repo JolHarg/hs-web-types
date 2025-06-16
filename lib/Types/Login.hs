@@ -1,6 +1,6 @@
-{-# LANGUAGE DeriveAnyClass     #-}
 {-# LANGUAGE DeriveGeneric      #-}
 {-# LANGUAGE DerivingStrategies #-}
+{-# LANGUAGE DerivingVia        #-}
 {-# LANGUAGE Unsafe             #-}
 
 module Types.Login where
@@ -14,4 +14,4 @@ data Login = Login {
     username :: Username,
     password :: Password
 } deriving stock (Eq, Show, Read, Generic)
-    deriving anyclass (FromJSON, ToJSON)
+    deriving (FromJSON, ToJSON) via Generically Login

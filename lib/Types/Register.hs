@@ -1,6 +1,5 @@
-{-# LANGUAGE DeriveAnyClass     #-}
+{-# LANGUAGE DerivingVia     #-}
 {-# LANGUAGE DeriveGeneric      #-}
-{-# LANGUAGE DerivingStrategies #-}
 {-# LANGUAGE Unsafe             #-}
 
 module Types.Register where
@@ -18,4 +17,4 @@ data Register = Register {
     name     :: Name,
     password :: Password
 } deriving stock (Eq, Show, Read, Generic)
-    deriving anyclass (FromJSON, ToJSON)
+    deriving (FromJSON, ToJSON) via Generically Register
