@@ -1,5 +1,3 @@
-{-# LANGUAGE DeriveDataTypeable #-}
-{-# LANGUAGE DeriveGeneric      #-}
 {-# LANGUAGE DerivingVia        #-}
 {-# LANGUAGE Unsafe             #-}
 

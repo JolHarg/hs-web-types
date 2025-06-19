@@ -33,11 +33,8 @@ library
     , text        ^>=2.1.2
     , uuid-types  ^>=1.0.6
   hs-source-dirs:     lib
-  default-language:   Haskell2010
+  default-language:   GHC2024
   default-extensions:
-    DerivingStrategies
-    ImportQualifiedPost
-    NoGeneralisedNewtypeDeriving
     OverloadedStrings
     UnicodeSyntax
   ghc-options:
@@ -56,10 +53,8 @@ test-suite jolharg-web-types-test
     buildable: False
   hs-source-dirs:     test
   type:               exitcode-stdio-1.0
-  default-language:   Haskell2010
+  default-language:   GHC2024
   default-extensions:
-    DerivingStrategies
-    ImportQualifiedPost
     NoGeneralisedNewtypeDeriving
     OverloadedStrings
     UnicodeSyntax

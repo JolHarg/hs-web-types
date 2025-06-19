@@ -1,5 +1,4 @@
 {-# LANGUAGE DerivingVia     #-}
-{-# LANGUAGE DeriveGeneric      #-}
 {-# LANGUAGE Unsafe             #-}
 
 module Types.Register where

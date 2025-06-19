@@ -1,4 +1,3 @@
-{-# LANGUAGE FlexibleContexts #-}
 {-# LANGUAGE Safe             #-}
 
 module Types.ErrorMessage (ErrorMessage(getErrorMessage), errMsg) where
