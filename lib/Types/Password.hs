@@ -1,5 +1,5 @@
-{-# LANGUAGE DerivingVia        #-}
-{-# LANGUAGE Unsafe             #-}
+{-# LANGUAGE DerivingVia #-}
+{-# LANGUAGE Unsafe      #-}
 
 module Types.Password (Password(Password), mkPassword, getPassword) where
 

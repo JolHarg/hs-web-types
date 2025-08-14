@@ -1,6 +1,6 @@
 cabal-version:      3.0
 name:               jolharg-web-types
-version:            0.2.0.0
+version:            0.3.0.0
 license:            AGPL-3.0-only
 author:             Dan Dart
 maintainer:         git@dandart.co.uk
@@ -32,11 +32,14 @@ library
     , servant     ^>=0.20.3.0
     , text        ^>=2.1.2
     , uuid-types  ^>=1.0.6
+
   hs-source-dirs:     lib
   default-language:   GHC2024
   default-extensions:
+    NoGeneralizedNewtypeDeriving
     OverloadedStrings
     UnicodeSyntax
+
   ghc-options:
     -Wall -Werror -Weverything -Wno-unsafe -Wno-safe
     -Wno-missing-import-lists -Wno-missing-export-lists
@@ -49,8 +52,9 @@ library
     -Wno-missed-specialisations
 
 test-suite jolharg-web-types-test
-  if arch(javascript) || arch(wasm32)
+  if (arch(javascript) || arch(wasm32))
     buildable: False
+
   hs-source-dirs:     test
   type:               exitcode-stdio-1.0
   default-language:   GHC2024
@@ -58,22 +62,27 @@ test-suite jolharg-web-types-test
     NoGeneralisedNewtypeDeriving
     OverloadedStrings
     UnicodeSyntax
+
   main-is:            Spec.hs
+
   if !arch(wasm32)
-    ghc-options: -threaded -rtsopts -with-rtsopts=-N 
+    ghc-options: -threaded -rtsopts -with-rtsopts=-N
+
   ghc-options:
-    -Wall -Werror -Weverything
-    -Wno-unsafe -Wno-safe -Wno-missing-import-lists
-    -Wno-missing-export-lists -Wno-implicit-prelude
-    -Wno-missing-local-signatures -Wno-missing-safe-haskell-mode
-    -Wno-prepositive-qualified-module -Wno-missing-kind-signatures
-    -Wno-missing-poly-kind-signatures -Wno-all-missed-specialisations
-    -Wno-missed-specialisations -Wno-missing-role-annotations
+    -Wall -Werror -Weverything -Wno-unsafe -Wno-safe
+    -Wno-missing-import-lists -Wno-missing-export-lists
+    -Wno-implicit-prelude -Wno-missing-local-signatures
+    -Wno-missing-safe-haskell-mode -Wno-prepositive-qualified-module
     -Wno-missing-kind-signatures -Wno-missing-poly-kind-signatures
-    -Wno-unrecognised-warning-flags -Wno-missed-specialisations
+    -Wno-all-missed-specialisations -Wno-missed-specialisations
+    -Wno-missing-role-annotations -Wno-missing-kind-signatures
+    -Wno-missing-poly-kind-signatures -Wno-unrecognised-warning-flags
+    -Wno-missed-specialisations
+
   build-depends:
     , base   ^>=4.21.0.0
     , hspec  ^>=2.11.2
+
   -- , jolharg-web-types
   -- , hspec-core
   -- , hspec-expectations

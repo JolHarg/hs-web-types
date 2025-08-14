@@ -1,5 +1,5 @@
-{-# LANGUAGE DerivingVia        #-}
-{-# LANGUAGE Unsafe             #-}
+{-# LANGUAGE DerivingVia #-}
+{-# LANGUAGE Unsafe      #-}
 
 module Types.Email (Email(Email), mkEmail, getEmail) where
 

@@ -1,4 +1,4 @@
-{-# LANGUAGE Unsafe             #-}
+{-# LANGUAGE Unsafe #-}
 
 module Types.UserType where
 
