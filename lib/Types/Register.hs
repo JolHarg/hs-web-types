@@ -15,5 +15,5 @@ data Register = Register {
     email    :: Email,
     name     :: Name,
     password :: Password
-} deriving stock (Eq, Show, Read, Generic)
+} deriving stock (Eq, Ord, Show, Read, Generic)
     deriving (FromJSON, ToJSON) via Generically Register

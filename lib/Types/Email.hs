@@ -13,7 +13,7 @@ import Types.ErrorMessage
 newtype Email = Email {
     getEmail :: Text
 } deriving stock (Generic, Data)
-    deriving (FromJSON, ToJSON, Show, Read, Eq, FromHttpApiData, ToHttpApiData) via Text
+    deriving (FromJSON, ToJSON, Show, Read, Eq, Ord, FromHttpApiData, ToHttpApiData) via Text
 
 mkEmail ∷ Text → Either ErrorMessage Email
 mkEmail = pure . Email -- @TODO

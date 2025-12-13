@@ -14,7 +14,7 @@ newtype VerificationToken = VerificationToken {
     getVerificationToken :: UUID
 } deriving stock (Generic, Data)
     -- do we need to redact ToHttpApiData?
-    deriving (Eq, Read, FromJSON, FromHttpApiData, ToHttpApiData) via UUID
+    deriving (Eq, Ord, Read, FromJSON, FromHttpApiData, ToHttpApiData) via UUID
 
 instance Show VerificationToken where
     show _ = "[redacted]"

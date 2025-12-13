@@ -16,7 +16,7 @@ newtype Password = Password {
     getPassword :: Text
 } deriving stock (Generic, Data)
     -- do we need to redact ToHttpApiData?
-    deriving (Eq, Read, Show, FromJSON, ToJSON, FromHttpApiData, ToHttpApiData) via Text
+    deriving (Eq, Ord, Read, Show, FromJSON, ToJSON, FromHttpApiData, ToHttpApiData) via Text
 
 -- TODO redaction
 

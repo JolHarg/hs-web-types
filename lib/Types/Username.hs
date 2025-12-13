@@ -13,7 +13,7 @@ import Types.ErrorMessage
 newtype Username = Username {
     getUsername :: Text
 } deriving stock (Generic, Data)
-    deriving (Eq, Show, Read, FromJSON, ToJSON, FromHttpApiData, ToHttpApiData) via Text
+    deriving (Eq, Ord, Show, Read, FromJSON, ToJSON, FromHttpApiData, ToHttpApiData) via Text
 
 mkUsername ∷ Text → Either ErrorMessage Username
 mkUsername = pure . Username -- @TODO

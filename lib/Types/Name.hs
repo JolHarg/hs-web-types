@@ -15,7 +15,7 @@ import Types.ErrorMessage
 newtype Name = Name {
     getName :: Text
 } deriving stock (Generic, Data)
-    deriving (Eq, Show, Read, FromJSON, ToJSON, FromHttpApiData, ToHttpApiData) via Text
+    deriving (Eq, Ord, Show, Read, FromJSON, ToJSON, FromHttpApiData, ToHttpApiData) via Text
 
 mkName ∷ Text → Either ErrorMessage Name
 mkName potentialName = do
